@@ -1,7 +1,7 @@
 async function recognize(base64, lang, options) {
     const { config, utils } = options;
     const { tauriFetch: fetch } = utils;
-    let { model = "deepseek-ai/DeepSeek-V2.5", apiKey, requestPath, customPrompt } = config;
+    let { model = "Pro/Qwen/Qwen2-VL-7B-Instruct", apiKey, requestPath, customPrompt } = config;
 
     if (!requestPath) {
         requestPath = "https://api.openai.com";

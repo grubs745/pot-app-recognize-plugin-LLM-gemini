@@ -12,9 +12,16 @@ async function recognize(base64, lang, options) {
     if (requestPath.endsWith('/')) {
         requestPath = requestPath.slice(0, -1);
     }
-    if (!requestPath.endsWith('/chat/completions')) {
-        requestPath += '/v1/chat/completions';
+    if (requestPath.includes('gemini')) {
+        if (!requestPath.endsWith('/v1beta/openai')) {
+            requestPath += '/v1beta/openai';
+        }
+    } else {
+        if (!requestPath.endsWith('/chat/completions')) {
+            requestPath += '/v1/chat/completions';
+        }
     }
+
     if (!customPrompt) {
         customPrompt = "Just recognize the text in the image. Do not offer unnecessary explanations.";
     }else{

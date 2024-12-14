@@ -12,12 +12,16 @@ async function recognize(base64, lang, options) {
     if (requestPath.endsWith('/')) {
         requestPath = requestPath.slice(0, -1);
     }
+
     if (requestPath.includes('gemini')) {
         if (!requestPath.endsWith('/v1beta/openai')) {
             requestPath += '/v1beta/openai';
         }
+        if (!requestPath.endsWith('/v1/chat/completions')) {
+            requestPath += '/v1/chat/completions';
+        }
     } else {
-        if (!requestPath.endsWith('/chat/completions')) {
+        if (!requestPath.endsWith('/v1/chat/completions')) {
             requestPath += '/v1/chat/completions';
         }
     }

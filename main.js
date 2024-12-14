@@ -53,6 +53,10 @@ async function recognize(base64, lang, options) {
                 "role": "user",
                 "content": [
                     {
+                        "type": "text",
+                        "text": customPrompt
+                        },
+                    {
                         "type": "image_url",
                         "image_url": {
                             "url": `data:image/png;base64,${base64}`,

@@ -1,6 +1,6 @@
 # Pot-App LLM 文字识别插件
 ## 说明
-增加了对Gemini模型的支持，fork from [Ideenaster/pot-app-recognize-plugin-LLM]([https://github.com/Ideenaster/pot-app-recognize-plugin-LLM])
+增加了对Gemini模型的支持，fork from [Ideenaster/pot-app-recognize-plugin-LLM](https://github.com/Ideenaster/pot-app-recognize-plugin-LLM)
 ## usage
 填入API和API Endpoint，Endpoint的逻辑为：
 ```js
